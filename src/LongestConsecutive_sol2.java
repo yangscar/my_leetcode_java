@@ -23,6 +23,7 @@ public class Solution {
     
     private int mergeCluster(HashMap<Integer, Integer> map,
                                 int left, int right){
+        // one of left or right must be 1, the other must be old length
         int upper = right + map.get(right) -1;
         int lower = left - map.get(left) +1;
         int len = upper - lower +1;
