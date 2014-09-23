@@ -20,9 +20,9 @@ public class Solution {
         ArrayDeque<TreeNode> S = new ArrayDeque<TreeNode>();
         ArrayList<TreeNode> Q = new ArrayList<TreeNode>();
         inOrderTraversal(S, Q, root);
-        int i = 1, j = Q.size()-1;
-        while(i < Q.size() && Q.get(i-1).val <=Q.get(i).val) ++i;
-        --i;
+        int i = 0, j = Q.size()-1;
+        while(i < Q.size()-1 && Q.get(i).val <=Q.get(i+1).val) ++i;
+       
         while(j > 0 && Q.get(j-1).val <= Q.get(j).val) --j;
 
         int tmp = Q.get(j).val;
