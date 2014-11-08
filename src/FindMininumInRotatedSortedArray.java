@@ -16,7 +16,7 @@ public class Solution {
     private int find(int[] num, int lo, int hi){
         if (hi==lo) return num[lo];
         int mid = lo + (hi-lo)/2;
-        if (mid < hi && num[mid] > num[mid+1]){
+        if (mid < hi && num[mid] > num[mid+1])
             return num[mid+1];
         if(lo < mid && num[mid] < num[mid-1])
             return num[mid];
